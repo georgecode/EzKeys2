@@ -52,6 +52,7 @@ table {
 body{
 	background: url(images/space.jpg);
 	background-repeat: repeat;
+	font-family: 'Audiowide', cursive;
 
 	/*background-color: black;*/
 	/*box-shadow: 1px 1px 50px 20px black inset;*/
@@ -66,17 +67,33 @@ body{
 	text-align: center;
 }
 
+.keyboardCase{
+	margin: auto;
+	background-color: black;
+	margin-top: 15px;
+	padding-bottom: 30px;
+	padding-top: 1px;
+	width:97%;
+	border-radius: 20px 20px 30px 30px;
+	box-shadow: 10px 10px 5px #480b0a;
+	padding-right: 10px;
+	padding-left: 10px;
+
+
+}
 h1{
 	font-size: 3em;
-	color: pink;
+	color: white;
+	text-shadow:5px 5px 2px #480b0a;;
 	text-align: center;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 	font-weight: bolder;
 }
 
 .controle{
 	text-align: center;
+
 
 
 }
@@ -94,8 +111,8 @@ h1{
 .key{
 	background-color: white;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5e5e5e), to(#ffffff));
-	width: 100px;
-	height: 200px;
+	width: 9%;
+	height: 100px;
 	display: inline-block;
 	margin-top: 20px;
 	/*border: black solid 3px;*/
@@ -190,6 +207,7 @@ h1{
 	background: #802bc4;
 	border: #802bc4 solid 3px;
 	box-shadow: 10px 10px 5px #3d1c75;
+	
 }
 
 .key9:hover{
