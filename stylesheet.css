@@ -48,6 +48,20 @@ table {
 
 /*---------------End Reset--------------*/
 
+
+body{
+	background: url(images/space.jpg);
+	background-repeat: repeat;
+
+	/*background-color: black;*/
+	/*box-shadow: 1px 1px 50px 20px black inset;*/
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003500), to(#008800));*/
+
+}
+.wrapper{
+	
+}
+
 .ddbutton{
 	text-align: center;
 }
@@ -61,7 +75,7 @@ h1{
 	font-weight: bolder;
 }
 
-#controle{
+.controle{
 	text-align: center;
 
 
@@ -184,7 +198,7 @@ h1{
 
 
 
-#keyboard{
+.keyboard{
 	text-align: center;
 }
 
@@ -193,13 +207,6 @@ h1{
 
 }
 
-body{
-
-	background-color: black;
-	/*box-shadow: 1px 1px 50px 20px black inset;*/
-	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003500), to(#008800));*/
-
-}
 
 
 
