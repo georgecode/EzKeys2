@@ -1,0 +1,254 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------End Reset--------------*/
+
+
+body{
+	background: url(../images/space.jpg);
+	background-repeat: repeat;
+	font-family: 'Audiowide', cursive;
+
+	/*background-color: black;*/
+	/*box-shadow: 1px 1px 50px 20px black inset;*/
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003500), to(#008800));*/
+
+}
+.wrapper{
+	
+}
+.ddbutton{
+	margin-top: 15px;
+}
+.ddbutton, .dropdown-menu{
+	float:right;
+	margin-right: 20px;
+
+}
+
+.btn, .btn-default {
+	background-color:red;
+	border-color:red;
+	box-shadow: 7px 7px 3px #480b0a;
+}
+
+.btn-default.active, .btn-default.focus, 
+.btn-default:active, .btn-default:focus, 
+.btn-default:hover, 
+.open>.dropdown-toggle.btn-default{
+	background-color:#c60000;
+	border-color:black;
+}
+
+.keyboardCase{
+	margin: auto;
+	background-color: black;
+	margin-top: 15px;
+	padding-bottom: 30px;
+	padding-top: 1px;
+	width:97%;
+	border-radius: 20px 20px 30px 30px;
+	box-shadow: 10px 10px 5px #480b0a;
+	padding-right: 10px;
+	padding-left: 10px;
+
+
+}
+h1{
+	font-size: 3em;
+	color: white;
+	text-shadow:5px 5px 2px #480b0a;;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	font-weight: bolder;
+}
+
+.controle{
+	text-align: center;
+
+
+
+}
+
+.select{
+	background-color: #bd8ef9;
+	width: 80px;
+	height: 55px;
+	display: inline-block;
+	font-weight: bolder;
+	border: #362c3a 4px solid;
+	border-radius: 15px;
+}
+
+.key{
+	background-color: white;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5e5e5e), to(#ffffff));
+	width: 9%;
+	height: 100px;
+	display: inline-block;
+	margin-top: 20px;
+	/*border: black solid 3px;*/
+	border-radius: 5px 5px 30px 30px;
+	
+}
+
+
+
+.key1{
+	background: #d80704;
+	border: #d80704 solid 3px;
+	box-shadow: 10px 10px 5px #480b0a;
+
+}
+
+.key1:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key2{
+	background: #ef5110;
+	border: #ef5110 solid 3px;
+	box-shadow: 10px 10px 5px #994519;
+}
+
+.key2:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key3{
+	background: #fcf23b;
+	border: #fcf23b solid 3px;
+	box-shadow: 10px 10px 5px #b7ac30;
+}
+
+.key3:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key4{
+	background: #58ea61;
+	border: #58ea61 solid 3px;
+	box-shadow: 10px 10px 5px #3d8732;
+}
+
+.key4:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key5{
+	background: #25e3c9;
+	border: #25e3c9 solid 3px;
+	box-shadow: 10px 10px 5px #168246;
+}
+
+.key5:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key6{
+	background: #1c94eb;
+	border: #1c94eb solid 3px;
+	box-shadow: 10px 10px 5px #0e537d;
+}
+
+.key6:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key7{
+	background: #5153e6;
+	border: #5153e6 solid 3px;
+	box-shadow: 10px 10px 5px #253185;
+}
+
+.key7:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key8{
+	background: #6847d2;
+	border: #6847d2 solid 3px;
+	box-shadow: 10px 10px 5px #25367c;
+}
+
+.key8:hover{
+	border: #1e1919 solid 3px;
+}
+
+.key9{
+	background: #802bc4;
+	border: #802bc4 solid 3px;
+	box-shadow: 10px 10px 5px #3d1c75;
+	
+}
+
+.key9:hover{
+	border: #1e1919 solid 3px;
+}
+
+
+
+.keyboard{
+	text-align: center;
+}
+
+.keyIsDown{
+	border: #1e1919 solid 3px;
+
+}
+
+
+
+
+
+
+
+
+
+
