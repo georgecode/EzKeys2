@@ -43,11 +43,26 @@ $(document).ready(function(){
 
 
 	var keys = {
-		
-		eMinor: ['E3', 'G3', 'A3', 'B3', 'D4','E4','G4','A4','B4']
+	
+
+		//C D E F G A B, CDEFGAB
+
+		em: ['E3', 'G3', 'A3', 'B3', 'D4','E4','G4','A4','B4'],
+		fm: ['Dx3','F3', 'Gx3', 'Ax3','C4','Dx4','F4','Gx4','Ax4'],
+		fxm: ['E3', 'Fx3','A3', 'B3','Cx4','E4','Fx4','A4', 'B4'],
+		gm: ['D3','F3','G3','Ax3','C4','D4','F4','G4','Ax4'],
+		gxm: ['Dx3','Fx3','Gx3','B3','Cx4','Dx4','Fx4','Gx4','B4'],
+		am: ['C3','D3','E3','G3','A3','C4','D4','E4','G4'],
+		axm: ['Cx3','Dx3','F3','Gx3','Ax3','Cx4','Dx4','F4','Gx4'],
+		bm: ['D3','E3','Fx3','A3','B3','D4','E4','Fx4','A4'],
+		cm: ['C3','Dx3','F3','G3','Ax3','C4','Dx4','F4','G4'],
+		cxm: ['Cx3','E3','Fx3','Gx3','B3','Cx4','E4','Fx4','Gx4'],
+		dm: ['D3','F3','G3','A3','C4','D4','F4','G4','A4'],
+		dxm: ['Dx3','Fx3','Gx3','Ax3','Cx4','Dx4','Fx4','Gx4','Ax4']
+
 
 	}
-	console.log(keys.eMinor[2]) 
+	console.log(keys.em[2]) 
 
 
 
@@ -72,7 +87,73 @@ work('75k', 75, '.key8', n[7])
 work('76l', 76, '.key9', n[8])
 }
 
-keySelection(keys.eMinor)
+keySelection(keys.em)
+
+/*
+$('.em').on("click", function(){
+	var notexx = $(this).attr('class');
+	console.log(notexx)
+	$(function(){
+		console.log(notexx)
+		var fuck = "keys." + notexx
+		console.log(fuck)
+		keySelection(fuck)
+	})
+	
+	//keySelection(keys.em)
+})
+*/
+$('.em').on("click", function(){
+	keySelection(keys.em)
+})
+
+$('.fm').on("click", function(){
+	keySelection(keys.fm)
+})
+
+$('.fxm').on("click", function(){
+	keySelection(keys.fxm)
+})
+
+$('.gm').on("click", function(){
+	keySelection(keys.gm)
+})
+
+$('.gxm').on("click", function(){
+	keySelection(keys.gxm)
+})
+
+$('.am').on("click", function(){
+	keySelection(keys.am)
+})
+
+$('.axm').on("click", function(){
+	keySelection(keys.axm)
+})
+
+$('.bm').on("click", function(){
+	keySelection(keys.bm)
+})
+
+$('.cm').on("click", function(){
+	keySelection(keys.cm)
+})
+
+$('.cxm').on("click", function(){
+	keySelection(keys.cxm)
+})
+
+$('.dm').on("click", function(){
+	keySelection(keys.dm)
+})
+
+$('.dxm').on("click", function(){
+	keySelection(keys.dxm)
+})
+
+
+
+//keySelection(keys.em)
 
 //work('72h',72, '.key9', 'C4')
 
