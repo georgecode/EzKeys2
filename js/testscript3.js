@@ -12,7 +12,7 @@ $(document).ready(function(){
 //  and prevent the default re-triggering of a key
 //	before it is released
 
-	var work = function(allowed,num,keyid,tone){
+	var work = function(allowed,num,keyid,tone,letter){
 
 		var allowed = true;
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
 		        allowed = false;
 
 		        $(keyid).addClass('keyIsDown')
-		        $(keyid).html(sound(tone))
+		        $(keyid).html(letter + sound(tone))
 		        console.log(xevent.which)
 
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 		            if(xevent.which === num){            
 
-		            $(keyid).html('');
+		            $(keyid).html(letter);
 		            $(keyid).removeClass('keyIsDown')
 
 		            allowed = true;
@@ -76,15 +76,15 @@ $(document).ready(function(){
 
 	//work('65a', 65, '.key1', 'E3')
 
-	work('65a', 65, '.key1', n[0])
-	work('83s', 83, '.key2', n[1])
-	work('68d', 68, '.key3', n[2])
-	work('70f', 70, '.key4', n[3])
-	work('71g', 71, '.key5', n[4])
-	work('72h', 72, '.key6', n[5])
-	work('74j', 74, '.key7', n[6])
-	work('75k', 75, '.key8', n[7])
-	work('76l', 76, '.key9', n[8])
+	work('65a', 65, '.key1', n[0], 'A')
+	work('83s', 83, '.key2', n[1], 'S')
+	work('68d', 68, '.key3', n[2], 'D')
+	work('70f', 70, '.key4', n[3], 'F')
+	work('71g', 71, '.key5', n[4], 'G')
+	work('72h', 72, '.key6', n[5], 'H')
+	work('74j', 74, '.key7', n[6], 'J')
+	work('75k', 75, '.key8', n[7], 'K')
+	work('76l', 76, '.key9', n[8], 'L')
 	}
 //4.End---------------------
 
