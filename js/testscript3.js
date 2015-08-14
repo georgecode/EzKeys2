@@ -1,14 +1,16 @@
 $(document).ready(function(){
 
-
+//1.This function constructs the mp3 HTML5 audio tags and content
 	var sound = function(note){
 	 return '<audio autoplay> <source src="sounds/notes/' + note + '.mp3" type="audio/mpeg"></audio>'
 	}
 	
 	console.log (sound('C4'))
+//1.End----------------------
 
-
-//'<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>'
+//2.This function is used to assign a key a sound
+//  and prevent the default re-triggering of a key
+//	before it is released
 
 	var work = function(allowed,num,keyid,tone){
 
@@ -40,13 +42,11 @@ $(document).ready(function(){
 
 		})
 	}
+//2.End-----------------------
 
-
+//3. This object contains the arrays of sound clips for each key
+//	musical key (The key of X)
 	var keys = {
-	
-
-		//C D E F G A B, CDEFGAB
-
 		em: ['E3', 'G3', 'A3', 'B3', 'D4','E4','G4','A4','B4'],
 		fm: ['Dx3','F3', 'Gx3', 'Ax3','C4','Dx4','F4','Gx4','Ax4'],
 		fxm: ['E3', 'Fx3','A3', 'B3','Cx4','E4','Fx4','A4', 'B4'],
@@ -59,103 +59,101 @@ $(document).ready(function(){
 		cxm: ['Cx3','E3','Fx3','Gx3','B3','Cx4','E4','Fx4','Gx4'],
 		dm: ['D3','F3','G3','A3','C4','D4','F4','G4','A4'],
 		dxm: ['Dx3','Fx3','Gx3','Ax3','Cx4','Dx4','Fx4','Gx4','Ax4']
-
-
 	}
 	console.log(keys.em[2]) 
+//3.End----------------------
 
 
 
-/*
-work(allowed,num,keyid,tone)
-*/
-var keySelection =function(setOfNotes){
+//work(allowed,num,keyid,tone)<<function arugments
 
-	console.log(setOfNotes)
-	var n = setOfNotes
+//4. This creates a set of notes and assigns keys 
+//  for each musical key
+	var keySelection =function(setOfNotes){
 
-//work('65a', 65, '.key1', 'E3')
+		console.log(setOfNotes)//use this for debugging musically wrong notes
+		var n = setOfNotes
 
-work('65a', 65, '.key1', n[0])
-work('83s', 83, '.key2', n[1])
-work('68d', 68, '.key3', n[2])
-work('70f', 70, '.key4', n[3])
-work('71g', 71, '.key5', n[4])
-work('72h', 72, '.key6', n[5])
-work('74j', 74, '.key7', n[6])
-work('75k', 75, '.key8', n[7])
-work('76l', 76, '.key9', n[8])
-}
+	//work('65a', 65, '.key1', 'E3')
 
-keySelection(keys.em)
+	work('65a', 65, '.key1', n[0])
+	work('83s', 83, '.key2', n[1])
+	work('68d', 68, '.key3', n[2])
+	work('70f', 70, '.key4', n[3])
+	work('71g', 71, '.key5', n[4])
+	work('72h', 72, '.key6', n[5])
+	work('74j', 74, '.key7', n[6])
+	work('75k', 75, '.key8', n[7])
+	work('76l', 76, '.key9', n[8])
+	}
+//4.End---------------------
 
-/*
-$('.em').on("click", function(){
-	var notexx = $(this).attr('class');
-	console.log(notexx)
-	$(function(){
-		console.log(notexx)
-		var fuck = "keys." + notexx
-		console.log(fuck)
-		keySelection(fuck)
+
+	/*  Possible function notes for version 3.0
+	$('.em').on("click", function(){
+		var xxclass = $(this).attr('class');
+		console.log(xxclass)
+		$(function(){
+			console.log(xxclass)
+			var classKey = "keys." + xxclass
+			console.log(classKey)
+			keySelection(classKey)
+		})
 	})
-	
-	//keySelection(keys.em)
-})
-*/
-$('.em').on("click", function(){
+	*/
+
 	keySelection(keys.em)
-})
 
-$('.fm').on("click", function(){
-	keySelection(keys.fm)
-})
+//5.This is the menu used to make a musical key selection
 
-$('.fxm').on("click", function(){
-	keySelection(keys.fxm)
-})
+	$('.em').on("click", function(){
+		keySelection(keys.em)
+	})
 
-$('.gm').on("click", function(){
-	keySelection(keys.gm)
-})
+	$('.fm').on("click", function(){
+		keySelection(keys.fm)
+	})
 
-$('.gxm').on("click", function(){
-	keySelection(keys.gxm)
-})
+	$('.fxm').on("click", function(){
+		keySelection(keys.fxm)
+	})
 
-$('.am').on("click", function(){
-	keySelection(keys.am)
-})
+	$('.gm').on("click", function(){
+		keySelection(keys.gm)
+	})
 
-$('.axm').on("click", function(){
-	keySelection(keys.axm)
-})
+	$('.gxm').on("click", function(){
+		keySelection(keys.gxm)
+	})
 
-$('.bm').on("click", function(){
-	keySelection(keys.bm)
-})
+	$('.am').on("click", function(){
+		keySelection(keys.am)
+	})
 
-$('.cm').on("click", function(){
-	keySelection(keys.cm)
-})
+	$('.axm').on("click", function(){
+		keySelection(keys.axm)
+	})
 
-$('.cxm').on("click", function(){
-	keySelection(keys.cxm)
-})
+	$('.bm').on("click", function(){
+		keySelection(keys.bm)
+	})
 
-$('.dm').on("click", function(){
-	keySelection(keys.dm)
-})
+	$('.cm').on("click", function(){
+		keySelection(keys.cm)
+	})
 
-$('.dxm').on("click", function(){
-	keySelection(keys.dxm)
-})
+	$('.cxm').on("click", function(){
+		keySelection(keys.cxm)
+	})
 
+	$('.dm').on("click", function(){
+		keySelection(keys.dm)
+	})
 
-
-//keySelection(keys.em)
-
-//work('72h',72, '.key9', 'C4')
+	$('.dxm').on("click", function(){
+		keySelection(keys.dxm)
+	})
+//5.End--------------------
 
 
 })//----------end of document------

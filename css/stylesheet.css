@@ -53,22 +53,14 @@ body{
 	background: url(../images/space.jpg);
 	background-repeat: repeat;
 	font-family: 'Audiowide', cursive;
-
-	/*background-color: black;*/
-	/*box-shadow: 1px 1px 50px 20px black inset;*/
-	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003500), to(#008800));*/
-
 }
-.wrapper{
-	
-}
+
 .ddbutton{
 	margin-top: 15px;
 }
 .ddbutton, .dropdown-menu{
 	float:right;
 	margin-right: 20px;
-
 }
 
 .btn, .btn-default {
@@ -96,9 +88,8 @@ body{
 	box-shadow: 10px 10px 5px #480b0a;
 	padding-right: 10px;
 	padding-left: 10px;
-
-
 }
+
 h1{
 	font-size: 1.2em;
 	color: white;
@@ -111,9 +102,6 @@ h1{
 
 .controle{
 	text-align: center;
-
-
-
 }
 
 .select{
@@ -134,17 +122,13 @@ h1{
 	display: inline-block;
 	margin-top: 20px;
 	/*border: black solid 3px;*/
-	border-radius: 5px 5px 30px 30px;
-	
+	border-radius: 5px 5px 30px 30px;	
 }
-
-
 
 .key1{
 	background: #d80704;
 	border: #d80704 solid 3px;
 	box-shadow: 10px 10px 5px #480b0a;
-
 }
 
 .key1:hover{
@@ -224,15 +208,12 @@ h1{
 .key9{
 	background: #802bc4;
 	border: #802bc4 solid 3px;
-	box-shadow: 10px 10px 5px #3d1c75;
-	
+	box-shadow: 10px 10px 5px #3d1c75;	
 }
 
 .key9:hover{
 	border: #1e1919 solid 3px;
 }
-
-
 
 .keyboard{
 	text-align: center;
