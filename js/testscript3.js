@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
+
 //1.This function constructs the mp3 HTML5 audio tags and content
 	var sound = function(note){
 	 return '<audio autoplay> <source src="sounds/notes/' + note + '.mp3" type="audio/mpeg"></audio>'
 	}
 	
-	console.log (sound('C4'))
+	//console.log (sound('C4'))//Use this for Debugging
 //1.End----------------------
 
 //2.This function is used to assign a key a sound
@@ -45,7 +46,7 @@ $(document).ready(function(){
 //2.End-----------------------
 
 //3. This object contains the arrays of sound clips for each key
-//	musical key (The key of X)
+//	musical key (The key of whatever)
 	var keys = {
 		em: ['E3', 'G3', 'A3', 'B3', 'D4','E4','G4','A4','B4'],
 		fm: ['Dx3','F3', 'Gx3', 'Ax3','C4','Dx4','F4','Gx4','Ax4'],
@@ -65,13 +66,13 @@ $(document).ready(function(){
 
 
 
-//work(allowed,num,keyid,tone)<<function arugments
+//work(allowed,num,keyid,tone,letter)<<function arugments
 
 //4. This creates a set of notes and assigns keys 
 //  for each musical key
 	var keySelection =function(setOfNotes){
 
-		console.log(setOfNotes)//use this for debugging musically wrong notes
+		//console.log(setOfNotes)//use this for debugging musically wrong notes
 		var n = setOfNotes
 
 	//work('65a', 65, '.key1', 'E3')
@@ -88,72 +89,35 @@ $(document).ready(function(){
 	}
 //4.End---------------------
 
-
-	/*  Possible function notes for version 3.0
-	$('.em').on("click", function(){
-		var xxclass = $(this).attr('class');
-		console.log(xxclass)
-		$(function(){
-			console.log(xxclass)
-			var classKey = "keys." + xxclass
-			console.log(classKey)
-			keySelection(classKey)
-		})
-	})
-	*/
-
-	keySelection(keys.em)
+	
+keySelection(keys.em)
+	
 
 //5.This is the menu used to make a musical key selection
-
+	/*For Testing 
 	$('.em').on("click", function(){
 		keySelection(keys.em)
 	})
+	*/
 
-	$('.fm').on("click", function(){
-		keySelection(keys.fm)
-	})
+var assignNotesToKey = function(ScaleKey){
+	$(ScaleKey).on("click", function(){
+			keySelection(keys[$(this).attr('class')])
+	})		   
+}
+ assignNotesToKey(".em")
+ assignNotesToKey(".fm")
+ assignNotesToKey(".fxm")
+ assignNotesToKey(".gm")
+ assignNotesToKey(".gxm")
+ assignNotesToKey(".am")
+ assignNotesToKey(".axm")
+ assignNotesToKey(".bm")
+ assignNotesToKey(".cm")
+ assignNotesToKey(".cxm")
+ assignNotesToKey(".dm")
+ assignNotesToKey(".dxm")
 
-	$('.fxm').on("click", function(){
-		keySelection(keys.fxm)
-	})
-
-	$('.gm').on("click", function(){
-		keySelection(keys.gm)
-	})
-
-	$('.gxm').on("click", function(){
-		keySelection(keys.gxm)
-	})
-
-	$('.am').on("click", function(){
-		keySelection(keys.am)
-	})
-
-	$('.axm').on("click", function(){
-		keySelection(keys.axm)
-	})
-
-	$('.bm').on("click", function(){
-		keySelection(keys.bm)
-	})
-
-	$('.cm').on("click", function(){
-		keySelection(keys.cm)
-	})
-
-	$('.cxm').on("click", function(){
-		keySelection(keys.cxm)
-	})
-
-	$('.dm').on("click", function(){
-		keySelection(keys.dm)
-	})
-
-	$('.dxm').on("click", function(){
-		keySelection(keys.dxm)
-	})
+	
 //5.End--------------------
-
-
 })//----------end of document------
