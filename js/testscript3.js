@@ -42,6 +42,26 @@ $(document).ready(function(){
 		    }
 
 		})
+
+		//This is the start of mouse trigger function
+		/*
+		$(keyid).on('tap', function(){
+		 	$(this).html(letter + sound(tone))
+		 })
+*/
+
+		$(keyid).on('mouseenter', function(){
+		 	$(this).html(letter + sound(tone))
+		 })
+		
+		 $(keyid).on('mouseleave', function(){
+		 	$(this).html(letter)
+		 })
+		 /*
+		 $(keyid).on ('vmouseup', function(){
+		 	$(this).html(letter)
+		 })
+		*/
 	}
 //2.End-----------------------
 
@@ -118,6 +138,28 @@ var assignNotesToKey = function(ScaleKey){
  assignNotesToKey(".dm")
  assignNotesToKey(".dxm")
 
-	
+
+
+
 //5.End--------------------
+
+/*
+var mouseTrigger = function(keyid,tone,letter){
+	 $(keyid).on('mousedown', function(){
+	 	$(this).html(letter + sound(tone))
+	 })
+	 $(keyid).on('mouseleave', function(){
+	 	$(this).html(letter)
+	 })
+
+	 $(keyid).on ('mouseup', function(){
+	 	$(this).html(letter)
+	 })
+}
+mouseTrigger(".key2","B4",'S')	
+*/
+
+
+
+
 })//----------end of document------
