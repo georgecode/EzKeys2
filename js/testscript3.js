@@ -1,15 +1,34 @@
 $(document).ready(function(){
 
+//1. This object contains the arrays of sound clips for each key
+//	musical key (The key of whatever)
+	var keys = {
+		em: ['E3', 'G3', 'A3', 'B3', 'D4','E4','G4','A4','B4'],
+		fm: ['Dx3','F3', 'Gx3', 'Ax3','C4','Dx4','F4','Gx4','Ax4'],
+		fxm: ['E3', 'Fx3','A3', 'B3','Cx4','E4','Fx4','A4', 'B4'],
+		gm: ['D3','F3','G3','Ax3','C4','D4','F4','G4','Ax4'],
+		gxm: ['Dx3','Fx3','Gx3','B3','Cx4','Dx4','Fx4','Gx4','B4'],
+		am: ['C3','D3','E3','G3','A3','C4','D4','E4','G4'],
+		axm: ['Cx3','Dx3','F3','Gx3','Ax3','Cx4','Dx4','F4','Gx4'],
+		bm: ['D3','E3','Fx3','A3','B3','D4','E4','Fx4','A4'],
+		cm: ['C3','Dx3','F3','G3','Ax3','C4','Dx4','F4','G4'],
+		cxm: ['Cx3','E3','Fx3','Gx3','B3','Cx4','E4','Fx4','Gx4'],
+		dm: ['D3','F3','G3','A3','C4','D4','F4','G4','A4'],
+		dxm: ['Dx3','Fx3','Gx3','Ax3','Cx4','Dx4','Fx4','Gx4','Ax4']
+	}
+	console.log(keys.em[2]) 
+//1.End----------------------
 
-//1.This function constructs the mp3 HTML5 audio tags and content
+
+//2.This function constructs the mp3 HTML5 audio tags and content
 	var sound = function(note){
-	 return '<audio autoplay> <source src="sounds/notes/' + note + '.mp3" type="audio/mpeg"></audio>'
+	 return '<audio autoplay id=' +note+ '> <source src="sounds/notes/' + note + '.mp3" type="audio/mpeg"></audio>'
 	}
 	
 	//console.log (sound('C4'))//Use this for Debugging
-//1.End----------------------
+//2.End----------------------
 
-//2.This function is used to assign a key a sound
+//3.This function is used to assign a key a sound
 //  and prevent the default re-triggering of a key
 //	before it is released
 
@@ -26,14 +45,16 @@ $(document).ready(function(){
 
 		        $(keyid).addClass('keyIsDown')
 		        $(keyid).html(letter + sound(tone))
+
 		        console.log(xevent.which)
 
 
 		        $(document).on("keyup", function(xevent){
 
 		            if(xevent.which === num){            
-
-		            $(keyid).html(letter);
+		            //$(keyid).html(letter)//Use for Testing		           
+		            audioId = "#" + tone		       		         
+		         	$(audioId).animate({volume: 0.1}, 500);
 		            $(keyid).removeClass('keyIsDown')
 
 		            allowed = true;
@@ -55,7 +76,9 @@ $(document).ready(function(){
 		 })
 		
 		 $(keyid).on('mouseleave', function(){
-		 	$(this).html(letter)
+		 	//$(this).html(letter)
+		 	audioId = "#" + tone		       		         
+		    $(audioId).animate({volume: 0.1}, 500);
 		 })
 		 /*
 		 $(keyid).on ('vmouseup', function(){
@@ -63,26 +86,8 @@ $(document).ready(function(){
 		 })
 		*/
 	}
-//2.End-----------------------
+//3.End-----------------------
 
-//3. This object contains the arrays of sound clips for each key
-//	musical key (The key of whatever)
-	var keys = {
-		em: ['E3', 'G3', 'A3', 'B3', 'D4','E4','G4','A4','B4'],
-		fm: ['Dx3','F3', 'Gx3', 'Ax3','C4','Dx4','F4','Gx4','Ax4'],
-		fxm: ['E3', 'Fx3','A3', 'B3','Cx4','E4','Fx4','A4', 'B4'],
-		gm: ['D3','F3','G3','Ax3','C4','D4','F4','G4','Ax4'],
-		gxm: ['Dx3','Fx3','Gx3','B3','Cx4','Dx4','Fx4','Gx4','B4'],
-		am: ['C3','D3','E3','G3','A3','C4','D4','E4','G4'],
-		axm: ['Cx3','Dx3','F3','Gx3','Ax3','Cx4','Dx4','F4','Gx4'],
-		bm: ['D3','E3','Fx3','A3','B3','D4','E4','Fx4','A4'],
-		cm: ['C3','Dx3','F3','G3','Ax3','C4','Dx4','F4','G4'],
-		cxm: ['Cx3','E3','Fx3','Gx3','B3','Cx4','E4','Fx4','Gx4'],
-		dm: ['D3','F3','G3','A3','C4','D4','F4','G4','A4'],
-		dxm: ['Dx3','Fx3','Gx3','Ax3','Cx4','Dx4','Fx4','Gx4','Ax4']
-	}
-	console.log(keys.em[2]) 
-//3.End----------------------
 
 
 
