@@ -47,7 +47,9 @@ table {
 }
 
 /*---------------End Reset--------------*/
-
+.AllMp3s{
+	color:white;
+}
 
 body{
 	background: url(../images/space.jpg);
